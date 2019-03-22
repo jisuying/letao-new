@@ -1,0 +1,5 @@
+.lt-content .table.table-bordered tr th,
+.lt-content .table.table-bordered tr td {
+    text-align: center;
+    vertical-align: middle;
+}
