@@ -63,15 +63,20 @@ a:active{
     box-sizing: border-box;
     line-height: 30px;
 }
-.lt-list ul li.active a{
+.lt-list ul li.current a{
     border-left: 3px solid #367FA9;
     background-color: #000;
 }
+
 .lt-list ul li a span{
     margin-right: 5px;
 }
 .lt-list ul li .second a{
     padding-left: 80px;
+}
+.lt-list ul li .second a.current{
+     border-left: 3px solid #367FA9;
+    background-color: #000;
 }
 /* 右侧 */
 .lt-right{
