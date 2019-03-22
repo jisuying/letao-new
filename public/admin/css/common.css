@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body,html{
+    height: 100%;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active{
+    color: #fff;
+    text-decoration: none;
+}
+/* 侧边栏 */
+.lt-aside{
+    width: 180px;
+    background-color: #222D32;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    transition: all 1s;
+}
+.lt-aside.active{
+    left: -180px;
+}
+.lt-aside .aside-head{
+    height: 50px;
+    line-height: 50px;
+    background-color: #367FA9;
+    font-size: 24px;
+    text-align: center;
+}
+.head-info {
+    margin: 30px 0;
+}
+.head-info img{
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.head-info p{
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.lt-list {
+    margin-top: 60px;
+    width: 100%;
+}
+.lt-list ul li a{
+    width: 100%;
+    display: block;
+    padding-left: 40px;
+    box-sizing: border-box;
+    line-height: 30px;
+}
+.lt-list ul li.active a{
+    border-left: 3px solid #367FA9;
+    background-color: #000;
+}
+.lt-list ul li a span{
+    margin-right: 5px;
+}
+.lt-list ul li .second a{
+    padding-left: 80px;
+}
+/* 右侧 */
+.lt-right{
+    padding-left: 180px;
+    /* background-color: pink; */
+    height: 100%;
+    width: 100%;
+    transition: all 1s;
+}
+.lt-right.active{
+    padding-left: 0;
+}
+.lt-right .right-head{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #3C8DBC;
+    height: 50px;
+    width: 100%;
+    padding-left: 180px;
+    transition: all 1s;
+}
+.lt-right .right-head.active{
+    padding-left: 0;
+}
+.lt-right .right-head a {
+    padding: 10px 30px;
+    font-size: 20px;
+}
+.lt-right .breadcrumb {
+    margin: 70px 0;
+}
+.lt-right .breadcrumb li a{
+    color: #3C8DBC;
+}
+#myModal .red{
+    color: red;
+}
