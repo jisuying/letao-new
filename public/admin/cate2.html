@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/cate2.css">
 </head>
+
 <body>
     <!-- 侧边栏 -->
     <div class="lt-aside">
@@ -21,7 +23,7 @@
         <!-- 列表 -->
         <div class="lt-list">
             <ul>
-                <li >
+                <li>
                     <a href="user.html"><span class="glyphicon glyphicon-user"></span>用户管理系统</a>
                 </li>
                 <li>
@@ -38,42 +40,42 @@
         </div>
     </div>
     <div class="lt-right">
-    <!-- 右侧头部 -->
+        <!-- 右侧头部 -->
         <div class="right-head">
             <a href="javascript:;" class="pull-left ani"><span class="glyphicon glyphicon-align-justify"></span></a>
             <a href="javascript:;" class="pull-right back"><span class="glyphicon glyphicon-log-out"></span></a>
         </div>
-    <div class="container-fluid">
-        <!-- 右侧面包屑导航 -->
-        <ol class="breadcrumb">
-            <li><a href="#">管理系统</a></li>
-            <li class="active">首页</li>
-        </ol>
-        <div class="lt-content">
-            <button class="btn btn-default insert">添加分类</button>
-            <table class="table table-bordered talbe-hover">
-                <thead>
-                    <tr>
-                        <th width="20%">序号</th>
-                        <th>一级分类名</th>
-                        <th>二级分类名</th>
-                        <th>二级LOGO</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td><img src="./images/none.png"  width="60" height="60"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="text-right">
-                <ul id="paginator"></ul>
+        <div class="container-fluid">
+            <!-- 右侧面包屑导航 -->
+            <ol class="breadcrumb">
+                <li><a href="#">管理系统</a></li>
+                <li class="active">首页</li>
+            </ol>
+            <div class="lt-content">
+                <button class="btn btn-default insert">添加分类</button>
+                <table class="table table-bordered talbe-hover">
+                    <thead>
+                        <tr>
+                            <th width="20%">序号</th>
+                            <th>一级分类名</th>
+                            <th>二级分类名</th>
+                            <th>二级LOGO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td><img src="./images/none.png" width="60" height="60"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-right">
+                    <ul id="paginator"></ul>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <!-- 模态框 -->
     <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
@@ -106,25 +108,27 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle btnChange" name="button" type="button" id="dropdownMenu1" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="true">
+                                <button class="btn btn-default dropdown-toggle btnChange"  type="button"
+                                    id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     请选择一级分类名称
                                     <span class="caret"></span>
                                 </button>
+                                <input type="hidden" name="categoryId">
                                 <ul class="dropdown-menu ulChange" aria-labelledby="dropdownMenu1">
-                                    
+
                                 </ul>
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="categoryName" placeholder="请输入一级分类名称">
+                            <input type="text" class="form-control" name="brandName" placeholder="请输入一级分类名称">
                         </div>
                         <div class="form-group push">
                             <button class="btn btn-default">上传图片</button>
-                            <input type="file" name="file">
+                            <input type="file" name="pic1" id="fileupload" data-url="/category/addSecondCategoryPic">
                         </div>
                         <div class="form-group">
-                            <img src="./images/none.png" width="100" height="100" name="img"class="img" >
+                            <img src="./images/none.png" width="100" height="100">
+                            <input type="hidden" name="brandLogo">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -136,13 +140,15 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
     <script src="./lib/jquery/jquery.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/cate2.js"></script>
-    <script type="text/html" id="cate2-tpl"> 
+    <script type="text/html" id="cate2-tpl">
         {{each rows v i}}
              <tr>
                 <td>{{(page - 1 )* size + i + 1}}</td>
@@ -158,4 +164,5 @@
     {{/each}}
     </script>
 </body>
+
 </html>
